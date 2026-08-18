@@ -1,0 +1,1 @@
+import{colors, fontFamily} from "@/theme"
