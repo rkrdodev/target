@@ -17,7 +17,9 @@ export function Target({data, ...rest}: Props) {
         <TouchableOpacity style={styles.container} {...rest}>
             <View style={styles.content}>
                 <Text style={styles.name}>{data.name}</Text>
-                <Text style={styles.status}>{data.percentage}</Text>
+                <Text style={styles.status} numberOfLines={1}>
+                    {data.percentage} • {data.current} de {data.target}
+                </Text>
             </View>
             <MaterialIcons name="chevron-right" size={20} />
         </TouchableOpacity>

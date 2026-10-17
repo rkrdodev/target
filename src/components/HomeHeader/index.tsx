@@ -21,7 +21,7 @@ export function HomeHeader({ data }: Props) {
             style={styles.container}>
         <View>
             <Text style={styles.label}> Total que você possui</Text>
-            <Text style={styles.total}> {data.total}</Text>
+            <Text style={styles.total}>{data.total}</Text>
         </View>
         <Separator color={colors.blue[400]} />
         <View style={styles.summary}>
@@ -32,6 +32,7 @@ export function HomeHeader({ data }: Props) {
             <Summary
                 data={data.output}
                 icon={{name: "arrow-downward", color: colors.red[400]}}
+                isRight
             />
         </View>
         </LinearGradient>

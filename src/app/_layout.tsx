@@ -7,6 +7,7 @@ import {
 } from "@expo-google-fonts/inter";
 import { colors } from "@/theme/colors";
 import { Loading } from "@/components/loading";
+import { TargetsProvider } from "@/data/TargetsProvider";
 export default function Layout() {
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
@@ -17,12 +18,14 @@ export default function Layout() {
     return <Loading />;
   }
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-        contentStyle: { backgroundColor: colors.white },
-      }}
-    />
+    <TargetsProvider>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          contentStyle: { backgroundColor: colors.white },
+        }}
+      />
+    </TargetsProvider>
   );
   
 }
